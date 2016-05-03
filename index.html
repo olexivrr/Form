@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script>
+    function localStorage() {
+      if (typeof(Storage) !== "undefined") {
+        localStorage.firstname = document.getElementById("firstname").value;
+        localStorage.lastname = document.getElementById("lastname").value;
+        localStorage.email = document.getElementById("email").value;
+		localStorage.email = document.getElementById("tel").value;
+		localStorage.email = document.getElementById("address").value;
+		localStorage.email = document.getElementById("hobby").value;
+      }
+    }
+  </script>
+  <title>Анкета працівника</title>
+</head>
+
+<body>
+	<header>
+		<h1>Анкета працівника</h1>
+	</header>
+	<nav>
+		<a>Автор</a>  <a href="http://vk.com/id155519023">Олексів Ростислав</a>
+	</nav>
+ <main>
+    <h3>Внесіть Ваші дані в анкету</h3>
+    <form onsubmit="localStorage()">
+		<b>Ім'я:</b><br>
+			<input type="text" name="firstname" id="firstname" size=15 maxlength=20><br><br>
+		<b>Прізвище:</b><br>
+			<input type="text" name="lastname" id="lastname" size=15 maxlength=20><br><br>
+		<b>Дата народження:</b><br>
+			<input type="date" name="birthday" id="birthday"><br><br>
+		<b>Ви:</b><br> 
+			<input type=radio name="sex" value="man" checked> Чоловік <br>
+			<input type=radio name="sex" value="woman"> Жінка<br><br>
+		<b>Номер телефону:</b><br>
+			<input type="tel" name="tel" id="tel" size=12 maxlength=13 value="+380"><br><br>
+		<b>Ваш E-mail:</b><br>
+			<input type="email" name="email" id="email" size=37 maxlength=80 value="@"><br><br>
+		<b>Місце проживання:</b><br>
+			<input type="text" name="address" id="address" size=30 maxlength=200><br><br>
+		<b>Сфера професійних навиків:</b><br>
+			<input type=radio name="skills" value="technical" checked> Технічна<br>
+			<input type=radio name="skills" value="humanitarian"> Гуманітарна<br><br>
+		<b>Хоббі</b><br>
+			<textarea name="message" rows="10" cols="60" id="hobby"></textarea><br><br>
+		<input type=submit value="Відправити"><input type=reset value="Очистити">
+    </form>
+    </main>
+    <footer><small>developed by Rostik</small></footer>
+</body>
+
+</html>
